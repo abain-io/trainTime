@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trainTime</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        
+</head>
+
+<body>
+
+    <form>
+        Train Time:
+        <br>
+        <input type="text" class="train-time">
+        <br> Destination:
+        <br>
+        <input type="text" class="destination">
+        <br> First Train Time:
+        <br>
+        <input type="text" class="first-train-time">
+        <br> Frequency:
+        <br>
+        <input type="text" class="frequency">
+    </form>
+    <br>
+
+    <button class="submit-btn" type="button">Submit</button>
+
+    <script>
+        $(".submit-btn").on("click", function () {
+            //added variable to hold values
+            var trainTime = $(".train-time").val();
+            console.log(trainTime);
+            var destination = $(".destination").val();
+            console.log(destination);
+            var firstTrainTime = $(".first-train-time").val();
+            console.log(firstTrainTime);
+            var frequency = $(".frequency").val();
+            console.log(frequency);
+            //added functionality to clear values
+            $(".train-time").val("");
+            $(".destination").val("");
+            $(".first-train-time").val("");
+            $(".frequency").val("");
+
+            var newTrain = { 
+                trainTimeKey: trainTime,
+                destKey: destination,
+                firstTrainTimeKey: firstTrainTime,
+                frequencyKey: frequency
+            }
+//push object in to firebase DB...//pushing object ito DB once submit is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
+
+        })
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- // Initialize Firebase
+//   var config = {
+//     apiKey: "AIzaSyBczr0bzl36qFAnp5Z-cRVFWS8WW3zjDCQ",
+//     authDomain: "mysnarf-6698c.firebaseapp.com",
+//     databaseURL: "https://mysnarf-6698c.firebaseio.com",
+//     projectId: "mysnarf-6698c",
+//     storageBucket: "mysnarf-6698c.appspot.com",
+//     messagingSenderId: "798999193890"
+//   };
+//   firebase.initializeApp(config); -->
