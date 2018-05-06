@@ -44,6 +44,9 @@
             console.log(firstTrainTime);
             var frequency = $(".frequency").val();
             console.log(frequency);
+
+            // Alert
+            alert("Confirmation: Your train time was successfully added!");
             //added functionality to clear values
             $(".train-time").val("");
             $(".destination").val("");
@@ -56,7 +59,7 @@
                 firstTrainTimeKey: firstTrainTime,
                 frequencyKey: frequency
             }
-            //push object in to firebase DB...//pushing object ito DB once submit is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
+            //push object in to firebase DB...//pushing object into DB once submitted it is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
 
         })
     </script>
