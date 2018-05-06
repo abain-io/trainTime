@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../images/trains.png");
+    font-size: 34px;
+    line-height: 35px;
+    font-family: 'Arial', 'Helvetica-Neue', Helvetica, sans-serif;
+    color: black;
+    background-size: cover;
+    padding-left: 15px;
+    padding-top: 400px;
+    background-repeat: no-repeat;
+    background-postion: center center;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    font: black;
+    
+}
+
+.train-time {
+    width: 230px;
+    height: 30px;
+}
+
+.destination {
+    width: 230px;
+    height: 30px;
+}
+
+.first-train-time {
+    width: 230px;
+    height: 30px;
+}
+
+.frequency {
+    width: 230px;
+    height: 30px;
+}
+

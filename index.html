@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>trainTime</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        
+
 </head>
 
 <body>
@@ -27,7 +28,7 @@
         <br>
         <input type="text" class="frequency">
     </form>
-    <br>
+
 
     <button class="submit-btn" type="button">Submit</button>
 
@@ -48,13 +49,13 @@
             $(".first-train-time").val("");
             $(".frequency").val("");
 
-            var newTrain = { 
+            var newTrain = {
                 trainTimeKey: trainTime,
                 destKey: destination,
                 firstTrainTimeKey: firstTrainTime,
                 frequencyKey: frequency
             }
-//push object in to firebase DB...//pushing object ito DB once submit is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
+            //push object in to firebase DB...//pushing object ito DB once submit is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
 
         })
     </script>
