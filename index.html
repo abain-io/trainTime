@@ -6,66 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>trainTime</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   
 
 </head>
 
 <body>
+    <div class="jumbotron" style="background-color: black; color: white">
+        <h1 class="text-center">Train Time</h1>
+        <h3 class="text-center" </h3>
+    </div>
 
-    <form>
-        Train Time:
-        <br>
-        <input type="text" class="train-time">
-        <br> Destination:
-        <br>
-        <input type="text" class="destination">
-        <br> First Train Time:
-        <br>
-        <input type="text" class="first-train-time">
-        <br> Frequency:
-        <br>
-        <input type="text" class="frequency">
-    </form>
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <!-- Current Employees-->
+            <div class="card card-primary">
+                <div class="card-heading">
+                    <h3 class="card-title">
+                        <strong>Current Train Schedule</strong>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover" id='employee-table'>
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Employee  -->
+        <div class="card card-primary">
+            <div class="card-heading">
+                <h3 class="card-title">
+                    <strong>Add Employee</strong>
+                </h3>
+            </div>
+            <div class="card-body">
+                <div>
+                    <form>
+                        Train Time:
+                        <br>
+                        <input type="text" class="train-time">
+                        <br> Destination:
+                        <br>
+                        <input type="text" class="destination">
+                        <br> First Train Time:
+                        <br>
+                        <input type="text" class="first-train-time">
+                        <br> Frequency:
+                        <br>
+                        <input type="text" class="frequency">
+                    </form>
+                </div>
 
 
 
-    <button class="submit-btn" type="button">Submit</button>
+                <button class="submit-btn" type="button">Submit</button>
 
-    <script>
-        $(".submit-btn").on("click", function () {
-            //added variable to hold values
-            var trainTime = $(".train-time").val();
-            console.log(trainTime);
-            var destination = $(".destination").val();
-            console.log(destination);
-            var firstTrainTime = $(".first-train-time").val();
-            console.log(firstTrainTime);
-            var frequency = $(".frequency").val();
-            console.log(frequency);
 
-            // Alert
-            alert("Confirmation: Your train time was successfully added!");
-            //added functionality to clear values
-            $(".train-time").val("");
-            $(".destination").val("");
-            $(".first-train-time").val("");
-            $(".frequency").val("");
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
-            var newTrain = {
-                trainTimeKey: trainTime,
-                destKey: destination,
-                firstTrainTimeKey: firstTrainTime,
-                frequencyKey: frequency
-            }
-            //push object in to firebase DB...//pushing object into DB once submitted it is clicked and after we push the object into the DB, we need to display it on to the HTML page. Submit button will be doing a lot. After user clicks on submit what happens next?
-
-        })
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+ 
+    <!-- JavaScript -->
+ <script src="assets/trainTime.js"></script>
 
 </body>
+
 
 </html>
 

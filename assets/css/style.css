@@ -9,10 +9,12 @@ body {
     font-family: 'Arial', 'Helvetica-Neue', Helvetica, sans-serif;
     color: black;
     background-size: cover;
-    padding-left: 10px;
-    padding-top: 400px;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.card-heading {
+    margin-left: 25px;
 }
 
 .submit-btn {
@@ -30,11 +32,13 @@ body {
 .train-time {
     width: 230px;
     height: 30px;
+
 }
 
 .destination {
     width: 230px;
     height: 30px;
+
 }
 
 .first-train-time {
@@ -51,6 +55,7 @@ input.train-time {
     font-size: 20px;
     border-color: red;
     border-width: 1px;
+    margin-left: 0px;
 }
 
 input.destination {
