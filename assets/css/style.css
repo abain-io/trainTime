@@ -17,6 +17,14 @@ body {
     margin-left: 25px;
 }
 
+.card.card-primary.bottom-card {
+    margin-left: 15px;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
 .submit-btn {
     text-align: center;
     margin-top: 20px;
